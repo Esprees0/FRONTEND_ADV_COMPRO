@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "name": "frontend_adv_compro",
+  "version": "1.0.0",
+  "description": "Repository for Front-End",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "type": "git",
+    "url": "git+",
+    "start": "node index.js",
+    "format": "prettier --write *.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Esprees0/FRONTEND_ADV_COMPRO/issues"
+  }
+}
