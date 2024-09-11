@@ -1,19 +1,14 @@
-require("dotenv").config();
-
 const express = require("express");
+const axios = require("axios")
+var bodyParser = require("body-parser");
+const path = require("path");
 const app = express();
-const port = process.env.PORT;
 
-app.get("/", (req, res) => {
-    res.send("Hoyaiyo sekai");
-});
+const base_url = "http://localhost:3000";
 
-/*db.run(`CREATE TABLE IF NOT EXISTS books(
-    id INTEGER PRIMARY KEY,
-    title TEXT,
-    author TEXT
-)`);*/
+app.set("views", path.join(_dirname, "/public/views"));
+app.set("view engine","ejs");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extend:false}));
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-});
+app.use(express.static(_dirname + "/public"));const path = require("path");

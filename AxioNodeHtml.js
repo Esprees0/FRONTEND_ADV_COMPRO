@@ -1,19 +1,16 @@
-// Description: Node.js HTML client
-// Requires: npm install express ejs axios body-parser
 
 const express = require("express");
-const axios = require("axios");
-const app = express();
+const axios = require("axios")
 var bodyParser = require("body-parser");
+const path = require("path");
+const app = express();
 
-// Base URL for the API
-// const base_url = "https://api.example.com";
 const base_url = "http://localhost:3000";
 
-// Set the template engine
-app.set("view engine", 'ejs');
+app.set("views", path.join(__dirname, "/public/views"));
+app.set("view engine","ejs");
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extend:false}));
 
 // Serve static files
 app.use(express.static(__dirname + "/public"));
